@@ -9,7 +9,8 @@
 ## Sample output
 
 
-''' android	49 '''
+''' bash
+android	49 '''
 > androidapk	1
 
 > announced	10
