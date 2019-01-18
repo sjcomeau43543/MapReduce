@@ -8,14 +8,12 @@
 
 ## Sample output
 
-
-''' bash
-android	49 '''
-> androidapk	1
-
-> announced	10
-
-> announcement	1
+| Word | Count |
+|-------|-------|
+| android	| 49 |
+| androidapk |	1 |
+| announced	| 10 |
+| announcement |	1 |
 
 > announcements	1
 
@@ -24,6 +22,7 @@ android	49 '''
 > another	22
 
 > answering	1
+
 > anticipated	1
 > antiencryption	1
 > antimalware	2
