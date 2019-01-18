@@ -9,8 +9,7 @@
 ## Sample output
 
 
-> android	49
-
+''' android	49 '''
 > androidapk	1
 
 > announced	10
