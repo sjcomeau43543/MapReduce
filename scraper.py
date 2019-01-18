@@ -44,7 +44,7 @@ def scrape(url, filename, print_title, print_datetime, print_author, print_descr
 		if all_four:
 			# open the file
 			with open(filename, 'a') as csv_file:
-				csv.writer(csv_file, delimiter=',', lineterminator='\n').writerow([title, date, author, description])
+				csv.writer(csv_file, delimiter=',', lineterminator='\n').writerow([title, description])
 			all_four = 0
 
 def main():
@@ -65,7 +65,7 @@ def main():
 				
 	# add the header lines
 	with open(filename, 'a') as file:
-		csv.writer(file, delimiter=',', lineterminator='\n').writerow(['Title', 'Date', 'Author', 'Description'])
+		csv.writer(file, delimiter=',', lineterminator='\n').writerow(['Title', 'Description'])
 
 	# scrape the data
 	sites = ["https://thehackernews.com/search?&max-results=20", "https://thehackernews.com/search?updated-max=2019-01-10T09:39:00%2B01:00&max-results=20&start=20&by-date=false", "https://thehackernews.com/search?updated-max=2018-12-19T09:43:00%2B01:00&max-results=20&start=40&by-date=false", "https://thehackernews.com/search?updated-max=2018-12-03T14:18:00%2B01:00&max-results=20&start=59&by-date=false", "https://thehackernews.com/search?updated-max=2018-11-15T16:09:00%2B01:00&max-results=20&start=78&by-date=false", "https://thehackernews.com/search?updated-max=2018-11-08T10:25:00%2B01:00&max-results=20&start=91&by-date=false", "https://thehackernews.com/search?updated-max=2018-10-19T16:12:00%2B02:00&max-results=20&start=110&by-date=false", "https://thehackernews.com/search?updated-max=2018-10-08T17:34:00%2B02:00&max-results=20&start=130&by-date=false", "https://thehackernews.com/search?updated-max=2018-09-27T21:20:00%2B02:00&max-results=20&start=146&by-date=false", "https://thehackernews.com/search?updated-max=2018-09-19T11:12:00%2B02:00&max-results=20&start=164&by-date=false", "https://thehackernews.com/search?updated-max=2018-09-06T15:08:00%2B02:00&max-results=20&start=184&by-date=false", "https://thehackernews.com/search?updated-max=2018-08-21T10:29:00%2B02:00&max-results=20&start=204&by-date=false", "https://thehackernews.com/search?updated-max=2018-08-08T12:33:00%2B02:00&max-results=20&start=222&by-date=false", "https://thehackernews.com/search?updated-max=2018-07-27T10:31:00%2B02:00&max-results=20&start=242&by-date=false", "https://thehackernews.com/search?updated-max=2018-07-15T09:49:00%2B02:00&max-results=20&start=262&by-date=false", "https://thehackernews.com/search?updated-max=2018-07-05T12:28:00%2B02:00&max-results=20&start=281&by-date=false", "https://thehackernews.com/search?updated-max=2018-06-26T13:53:00%2B02:00&max-results=20&start=299&by-date=false", "https://thehackernews.com/search?updated-max=2018-06-12T20:32:00%2B02:00&max-results=20&start=319&by-date=false", "https://thehackernews.com/search?updated-max=2018-06-05T11:47:00%2B02:00&max-results=20&start=339&by-date=false"]
