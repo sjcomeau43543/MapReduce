@@ -15,14 +15,14 @@ The reducer script will read from stdin to simplify the dictionary given from th
 
 ### In console
 To incorporate all of these components the suggested use is below.
-1. Make the scripts executable by running `chmod +x mapper.py; chmod +x reducer.py`
-2. Navigate to /bin/ `cd /bin`
-3. Symbolically link the executables as runnable binaries `ln -s /path/to/mapper.py; ln -s /path/to/reducer.py`
-4. Return to the original folder `cd /path/to`
+1. Make the scripts executable by running: `chmod +x mapper.py; chmod +x reducer.py`
+2. Navigate to /bin/: `cd /bin`
+3. Symbolically link the executables as runnable binaries: `ln -s /path/to/mapper.py; ln -s /path/to/reducer.py`
+4. Return to the original folder: `cd /path/to`
 5. `python scraper.py --title --description | mapper.py | sort | reducer.py`
 
 ### Integrating into Amazon S3 and EMR
-1. Run the scraper script to collect the data `python scraper.py --title --description`
+1. Run the scraper script to collect the data: `python scraper.py --title --description`
 2. Upload the mapper.py, reducer.py, and thehackernews.csv file to Amazon S3
 3. Navigate to Amazon EMR
 4. Create a cluster with the name `hadoop-*` with anything in the star and add a streaming step with the following settings
