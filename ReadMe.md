@@ -26,10 +26,10 @@ To incorporate all of these components the suggested use is below.
 2. Upload the mapper.py, reducer.py, and thehackernews.csv file to Amazon S3
 3. Navigate to Amazon EMR
 4. Create a cluster with the name `hadoop-*` with anything in the star and add a streaming step with the following settings
-  * the link to the csv we uploaded as the input (can use the folder selector to find it)
-  * the link to the mapper script
-  * the link to the reducer script
-  * a folder that does not already exist to hold the output: for ex s3://bucket/output
+  ⋅⋅⋅* the link to the csv we uploaded as the input (can use the folder selector to find it)
+  ⋅⋅⋅* the link to the mapper script
+  ⋅⋅⋅* the link to the reducer script
+  ⋅⋅⋅* a folder that does not already exist to hold the output: for ex s3://bucket/output
 
 ## Sample output
 
