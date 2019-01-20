@@ -15,7 +15,7 @@ The reducer script will read from stdin to simplify the dictionary given from th
 To incorporate all of these components the suggested use is below.
 1. Run the scraper script to collect the data `python scraper.py --title --description'
 2. Run the mapper script, sort the results, and run the reducer script
-2a. 
+* 2a. 
 
 ## Integrating into Amazon S3 and EMR
 
