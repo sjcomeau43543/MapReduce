@@ -12,12 +12,24 @@ The mapper script will read from stdin to produce a 'dictionary' of words and th
 The reducer script will read from stdin to simplify the dictionary given from the mapper script. Given a sorted dictionary, it will check to see if the next word is the same as the previous word and combine those results so the word count is updated. It will then print these results to stdout.
 
 ## Using this
-To incorporate all of these components the suggested use is below.
-1. Run the scraper script to collect the data `python scraper.py --title --description'
-2. Run the mapper script, sort the results, and run the reducer script
-* 2a. 
 
-## Integrating into Amazon S3 and EMR
+### In console
+To incorporate all of these components the suggested use is below.
+1. Make the scripts executable by running `chmod +x mapper.py; chmod +x reducer.py`
+2. Navigate to /bin/ `cd /bin`
+3. Symbolically link the executables as runnable binaries `ln -s /path/to/mapper.py; ln -s /path/to/reducer.py`
+4. Return to the original folder `cd /path/to`
+5. `python scraper.py --title --description | mapper.py | sort | reducer.py`
+
+### Integrating into Amazon S3 and EMR
+1. Run the scraper script to collect the data `python scraper.py --title --description`
+2. Upload the mapper.py, reducer.py, and thehackernews.csv file to Amazon S3
+3. Navigate to Amazon EMR
+4. Create a cluster with the name `hadoop-*` with anything in the star and add a streaming step with the following settings
+  * the link to the csv we uploaded as the input (can use the folder selector to find it)
+  * the link to the mapper script
+  * the link to the reducer script
+  * a folder that does not already exist to hold the output: for ex s3://bucket/output
 
 ## Sample output
 
