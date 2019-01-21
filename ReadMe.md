@@ -2,6 +2,8 @@
 
 ## Description
 
+https://github.com/sjcomeau43543/MapReduce
+
 ### scraper.py
 The scraper script will reach out to thehackernews.com starting from Jan 2019 and going back until June 2018 collecting the title, date, author, and shortened description of the articles on the front pages. It will store this information in a CSV and also print it out to the console during execution based on different input options.
 
