@@ -3,7 +3,7 @@
 ## Description
 
 ### scraper.py
-The scraper script will reach out to thehackernews.com starting from Jan 2019 and going back until June 2018 collecting the title, date, author, and shortened description of the article. It will store this information in a CSV and also print it out to the console during execution based on different input parameters.
+The scraper script will reach out to thehackernews.com starting from Jan 2019 and going back until June 2018 collecting the title, date, author, and shortened description of the articles on the front pages. It will store this information in a CSV and also print it out to the console during execution based on different input options.
 
 ### mapper.py
 The mapper script will read from stdin to produce a 'dictionary' of words and the count of the word per line. 'Dictionary' meaning that it will print the results to stdout but will not actually store a dictionary of items.
